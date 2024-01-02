@@ -8,7 +8,7 @@ public interface EmployeeService {
 
     public String medicalInsurance(int salary, String designation) throws InvalidInputException;
 
-    public Map<Integer, Object> deleteEmployee(Map<Integer, Object> map, int id);
+    public Map<Integer, Employee> deleteEmployee(Map<Integer, Employee> map, int id);
 
     public Employee createEmployee();
 }

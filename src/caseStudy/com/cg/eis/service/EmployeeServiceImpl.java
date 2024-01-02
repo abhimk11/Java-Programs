@@ -24,7 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Map<Integer, Object> deleteEmployee(Map<Integer, Object> map, int id) {
+    public Map<Integer, Employee> deleteEmployee(Map<Integer, Employee> map, int id) {
         map.remove(id);
         return map;
     }

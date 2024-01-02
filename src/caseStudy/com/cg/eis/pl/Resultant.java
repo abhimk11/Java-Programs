@@ -15,10 +15,10 @@ public class Resultant {
 
         EmployeeService service = new EmployeeServiceImpl();
 
-        Map<Integer, Object> map = new HashMap<>();
+        Map<Integer, Employee> map = new HashMap<>();
 
         System.out.println("HELLO,WELCOME TO EMPLOYEE SYSTEM: ");
-        System.out.println("Enter Try.Employee Details: ");
+        System.out.println("Enter The Employee Details: ");
         System.out.println("Enter Number of Employees to be added: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -34,16 +34,16 @@ public class Resultant {
             map.put(employee1.getId(), employee1);
         }
 
-        System.out.println("The Try.Employee Are: ");
+        System.out.println("The Employee Are: ");
 
-        for (Map.Entry<Integer, Object> entry : map.entrySet()) {
-            System.out.println("Try.Employee ID: " + entry.getKey() + ", Try.Employee DATA: " + entry.getValue());
+        for (Map.Entry<Integer, Employee> entry : map.entrySet()) {
+            System.out.println("The Employee ID: " + entry.getKey() + ", The Employee DATA: " + entry.getValue());
         }
 
         System.out.println("Do you want to Remove Employees? (Y/N)");
         String s = sc.next();
         if (s.equals("Y")) {
-            System.out.println("Enter Try.Employee ID: ");
+            System.out.println("Enter The Employee ID: ");
             int k = sc.nextInt();
             map = service.deleteEmployee(map, k);
         }
@@ -52,8 +52,8 @@ public class Resultant {
             System.out.println("NO EMPLOYEES!!!!");
         } else {
             //remove customer
-            for (Map.Entry<Integer, Object> entry : map.entrySet()) {
-                System.out.println("Try.Employee ID: " + entry.getKey() + ", Try.Employee DATA: " + entry.getValue());
+            for (Map.Entry<Integer, Employee> entry : map.entrySet()) {
+                System.out.println("The Employee ID: " + entry.getKey() + ", The Employee DATA: " + entry.getValue());
             }
         }
     }

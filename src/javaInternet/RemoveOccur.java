@@ -9,7 +9,7 @@ public class RemoveOccur {
     public static int[] OccuranceRemove(int[] a,int n){
 
         Arrays.sort(a);
-        ArrayList<Integer> ab =  new ArrayList<Integer>();
+        ArrayList<Integer> ab =  new ArrayList<>();
         for (int i=0;i<a.length;i++){
             if (a[i]!=n) {
                 ab.add(a[i]);

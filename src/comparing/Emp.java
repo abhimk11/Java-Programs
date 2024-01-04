@@ -23,6 +23,9 @@ public class Emp
         emps.add(new Emp(103, "Xavier", 94234));
         emps.add(new Emp(104, "AHI", 94234));
 
+        //Using stream API
+        //emps.stream().sorted(Comparator.comparing(e->e.name)).forEach(System.out::println);
+
         //System.out.println(emps);
         Collections.sort(emps, new IdComparator());
         Collections.sort(emps, new NameComparator());
